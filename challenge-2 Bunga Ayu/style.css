@@ -1,0 +1,357 @@
+
+
+@media only screen and (max-width: 576px) {
+  .nav-desktop {
+    display: none !important;
+  }
+  .img-car {
+    width: 90%;
+    height: auto;
+  }
+
+  .our {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+
+/* S E C T I O N 1 */
+  .car-title{
+    font-size: 30px;
+    padding-top: 5px;
+  }
+
+  .padding-flexible {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .button-car {
+    margin-top: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 50px;
+  }
+  .img-car{
+    height: 320px;
+    
+  }
+
+  .ctg-sec {
+    padding-top: 80px;
+    margin-left: 20px;
+  }
+  
+/* S E C T I O N 2 */  
+    .col {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 0px 50px 0px 50px; /* top right bottom left */
+    }
+  
+    .padding-flexible {
+      padding-left: 0px;
+      padding-right: 0px;
+    }
+ 
+
+    .img-service {
+      width: 350px;
+      height: 20%;
+      margin-top: 80px;
+    }
+  
+  .h2 {
+    padding-top: 5px;
+  }
+  
+    p {
+      font-size: 15px;
+    
+    }
+  
+    h5 {
+      font-size: 15px;
+      text-align: center;
+    }
+  
+    .col {
+      display: flex;
+      flex-direction: column;
+      padding: 0px 50px 0px 50px; /* top right bottom left */
+    }
+
+
+
+/* S E C T I O N 3 */
+
+.why-tittle{
+  margin-left: 30px;
+}
+
+.why-sub{
+  margin-left: 30px;
+  font-size: 17px;
+}
+
+.why-font{
+  font-size: 17px;
+  padding-top: 5px;
+}
+
+  .card-why {
+      width : auto;
+      height: 150px;
+      border-radius: 5px;
+      background-color: white;
+      padding: 10px;
+      padding-left: 20px;
+      padding-top: 10px;
+      padding-right: 10px;
+      padding-bottom: 40px;
+      box-shadow: 0 0 7px 3px rgba(0, 0, 0, 0.10);
+      margin-top: 20px;
+      margin-right: 10px;
+    }
+
+  /* S E C T I O N 4 */
+  .img-owl {
+    width: 100%;
+    height: auto;
+    margin-left: 40px;
+  }
+  .card-owl{
+    margin-left: 0px;
+    padding: auto;
+    font-size: 15px;
+    padding-left: 5px;
+  }
+  
+   /* S E C T I O N 5 */
+   .card-get {
+    margin-top: 30px;
+    padding-top: 20px;
+    width: 80%;
+    height: 330px;
+    border-radius: 5px;
+    box-shadow: 0 0 7px 3px rgba(0, 0, 0, 0.05);
+   }
+
+   .lorem-text{
+    font-size: 13px;
+   }
+   
+   .button-sewa{
+    padding-bottom: 20px;
+   }
+   
+  /* S E C T I O N 6 */
+
+  .faq-col{
+    padding-left: 0px;
+    padding-right: 80px;
+
+  }
+  .card-faq {
+    margin-right: 5px;
+    margin-left: 10px;
+    width: 130%;
+   }
+
+  /* f o o t e r */
+   .site-footer{
+    padding-top: 50px;
+    margin-left: 30px;
+    padding-bottom: 100px;
+   }
+
+  
+  .icon-foot{
+    padding: 5px;
+  }
+
+  .content-sec{
+    margin-top: 5px;
+  }
+
+  .fb{ 
+    width: 25px;
+
+   }
+
+  .ig{ 
+    width: 25px;
+
+   }
+  .twit{ 
+    width: 25px;
+  
+  }  
+  .mail{ 
+    width: 25px;
+
+  }  
+
+  .twitch{
+    width: 25px;
+  } 
+}
+
+
+
+/* Dekstop */
+
+@media only screen and (min-width: 576px) {
+  .nav-mobile {
+    display: none !important;
+  }
+
+  .nav-desktop {
+    display: static !important;
+  }
+
+  .h2 {
+    padding-top: 5px;
+  }
+  
+/* S E C T I O N 1 */
+  
+  .car-tagline {
+    margin-left: 100px;
+    padding: 10px;
+  }
+  .car-tag1{
+    font-size: 19px;
+  }
+  
+  .button-car{
+    margin-top: 30px;
+  }
+
+  .img-car{
+    width: 100vh;
+    height: 60vh;
+    margin-bottom: 25px;
+  }
+
+/* S E C T I O N 2 */
+
+
+.img-service {
+  width: 100%;
+  height: 100%;
+  padding-top: 20px;
+}
+
+.our-sec {
+    margin-top: 30px;
+}
+
+/* S E C T I O N 3 */
+
+.card-sec{
+  margin-left: 5px;
+}
+
+.why-font{
+  font-size: 20px;
+  padding-top: 5px;
+}
+
+.card-why {
+  width : 110%;
+  height: 200px;
+  border-radius: 5px;
+  background-color: white;
+  padding: 5px;
+  box-shadow: 0 0 7px 3px rgba(0, 0, 0, 0.10);
+  margin-top: 30px;
+  padding-left: 30px;
+  margin-left: 30px;
+  padding-right: 20px;
+}
+
+.why-sec{
+  padding-top: 10px;
+  height: 40px;
+  width: 35px;
+  margin-bottom: 10px;
+}
+
+.h3{
+  padding: 20px;
+}
+
+
+  /* S E C T I O N 5 */
+   .card-get {
+    margin-top: 50px;
+    padding-top: 80px;
+    width: 100%;
+    height: 300px;
+    border-radius: 5px;
+    box-shadow: 0 0 7px 3px rgba(0, 0, 0, 0.05);
+   }
+
+   .lorem-text{
+    font-size: 15px;
+   }
+
+   .button-sewa{
+    padding-bottom: 40px;
+    border-radius: 2px;
+    height: 0px;
+    margin-bottom: 50px;
+   }
+
+   /* S E C T I O N 6 */
+   .faq-tittle{
+    margin-left: 100px;
+    margin-top: 50px;
+   }
+
+   .card-faq {
+    margin-right: 40px;
+   }
+
+
+   /* f o o t e r */
+   .site-footer{
+    margin-top: 50px;
+  
+   }
+
+   .icon-foot{
+    padding: 5px;
+   }
+
+  .fb{ 
+    width: 25px;
+
+   }
+
+  .ig{ 
+    width: 25px;
+
+   }
+  .twit{ 
+      width: 25px;
+  
+  }  
+  .mail{ 
+    width: 25px;
+
+  }  
+  .twitch{
+    width: 25px;
+  } 
+
+}  
+
+  
+
+   
+}
