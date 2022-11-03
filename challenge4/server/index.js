@@ -1,27 +1,50 @@
-const http = require("http");
-const port = 7000;
-
-const fs = require("fs");
+const http = require('http');
+const fs = require('fs');
+  
+const port = 3000;
 
 http
-  .createServer((req, res) => {
-    switch (req.url) {
-      case "/":
-        req.url = "index.example.html";
-        break;
-      case "/cars.html":
-        req.url = "cariMobil.html";
-        break;
+    .createServer((req, res) => {
+        res.writeHead(200, {
+            'Content-Type' : 'text/html',
+        });
+ 
+
+    const url = req.url;
+    if (url === '/') { 
+        fs.readFile('public/index.html', (err, data) => { 
+            if (err) {
+                res.writeHead(404);
+                res.write('Error : file not found');
+            } else {
+                res.write(data);
+            }
+            res.end();
+        });
+    } else if (url === '/carimobil') {
+        fs.readFile('public/car.html', (err, data) => { 
+            if (err) {
+                res.writeHead(404);
+                res.write('Error : file not found');
+            } else {
+                res.write(data);
+            }
+            res.end();
+        });
+    } else {
+        //res.write('Hello world'); 
+        fs.readFile('public/car.html', (err, data) => { 
+            if (err) {
+                res.writeHead(404);
+                res.write('Error : file not found');
+            } else {
+                res.write(data);
+            }
+            res.end();
+        });
     }
-    let path = "public/" + req.url;
-    fs.readFile(path, (err, data) => {
-      res.writeHead(200);
-      res.end(data);
+})
+    .listen(port, () => {
+        console.log(`Server is listening on port ${port}..`);
+
     });
-  })
-  .listen(port, "localhost", () => {
-    console.log(
-      "Server sudah berjalan, silahkan buka http://localhost:%d",
-      port
-    );
-  });
