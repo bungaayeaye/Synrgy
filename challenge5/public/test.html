@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous" />
+  </head>
+
+  <body>
+    <div class=""></div>
+    <div id="liveAlertPlaceholder" class="hide"></div>
+    <button type="button" class="btn btn-primary" id="liveAlertBtn">Show live alert</button>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+    <script>
+      const alertPlaceholder = document.getElementById('liveAlertPlaceholder');
+
+      const alert = (message, type) => {
+        const wrapper = document.createElement('div');
+        wrapper.innerHTML = [`<div class="alert alert-${type} alert-dismissible" role="alert">`, `   <div>${message}</div>`, '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>', '</div>'].join(
+          ''
+        );
+        setTimeout(function () {
+          wrapper.parentNode.removeChild(wrapper);
+        }, 3000);
+
+        alertPlaceholder.append(wrapper);
+      };
+
+      const alertTrigger = document.getElementById('liveAlertBtn');
+      if (alertTrigger) {
+        alertTrigger.addEventListener('click', () => {
+          // const myTimeout = setTimeout(myGreeting, 2000);
+          alert('Nice, you triggered this alert message!', 'success');
+          // function myGreeting() {}
+
+          // Mymsg('close', 2000);
+          // function Mymsg(msg, duration) {
+          //   var alt = document.createElement('div');
+          //   alt.setAttribute('style', 'position:absolute;top:50%;left:50%;background-color:white;');
+          //   alt.innerHTML = msg;
+          //   setTimeout(function () {
+          //     alt.parentNode.removeChild(alt);
+          //   }, duration);
+          //   document.body.appendChild(alt);
+          // }
+        });
+      }
+
+      window.setTimeout(function () {
+        $('.alert')
+          .fadeTo(500, 0)
+          .slideUp(500, function () {
+            $(this).remove();
+          });
+      }, 4000);
+    </script>
+  </body>
+</html>

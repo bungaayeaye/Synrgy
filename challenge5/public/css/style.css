@@ -1,0 +1,83 @@
+body {
+  background: #e5e5e5;
+  /* overflow: hidden; */
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+/* slider kiri */
+.slider-item {
+  color: #8a8a8a;
+}
+.slider-item :hover {
+  color: #151515;
+  background: #cfd4ed;
+  width: 100%;
+}
+
+/* button add */
+.btn-add {
+  background: #0d28a6;
+  color: #ffffff;
+  border-radius: 2px;
+}
+/* lis mobil */
+.card {
+  padding: 24px;
+  width: 351px;
+  height: 446px;
+}
+.car-img {
+  width: 303px;
+  height: 222px;
+}
+.card-img-top {
+  margin: 31px, 17px;
+}
+.card-button {
+  width: 143.5px;
+  height: 48px;
+}
+
+.btn-card {
+  width: 130.5px;
+  height: 48px;
+}
+
+/* notif alert box */
+.btn-del-y {
+  background: #0d28a6;
+  border-radius: 2px;
+  color: #ffffff;
+  border: solid #0d28a6 1px;
+  /* width: 87px;
+  height: 36px; */
+}
+.btn-del-t {
+  border: solid #0d28a6 1px;
+  border-radius: 2px;
+  color: #0d28a6;
+}
+
+/* from edit */
+.needs-validation {
+  padding-top: 20px;
+}
+
+/* alert */
+.alert {
+  position: fixed;
+  top: 50px;
+  z-index: 2;
+  width: 40%;
+  /* margin-left: 30%; */
+
+  margin-left: 20%;
+}
+
+/* category */
+.categoty-color {
+  border: solid #0d28a6 0.5px;
+  color: #0d28a6;
+}

@@ -1,0 +1,130 @@
+<%- include('./layouts/header') %> 
+    <%- include('./layouts/nav') %> 
+        <!-- breadcrumb -->
+        <section class="pt-3 mt-5">
+          <div class="container">
+            <div class="row">
+              <div class="col">
+                <nav style="--bs-breadcrumb-divider: '>'" aria-label="breadcrumb">
+                  <ol class="breadcrumb">
+                    <li class="breadcrumb-item">
+                      <a href="#"><strong>Cars</strong></a>
+                    </li>
+                    <li class="breadcrumb-item active" aria-current="page">Library</li>
+                  </ol>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- akhir breadcrum -->
+
+        <!-- title -->
+        <section class="layout">
+          <div class="container">
+            <div class="row justify-content-between content">
+              <div class="col-2">
+                <h4>List Cars</h4>
+              </div>
+              <div class="col-2">
+                <a href="/add-car">
+                  <div class="btn-add text-center align-items-center pt-1" style="width: 100%; height: 100%"><img class="pe-3" src="asset/img/fi_plus.png" alt="" srcset="" /><label for=""> Add new car</label></div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- akhir title -->
+
+        <!-- category -->
+        <section class="pt-3">
+          <div class="container">
+            <div class="row">
+              <div class="col-12">
+                <div class="d-flex justify-content-start">
+                  <div><button type="button" class="btn btn-outline-primary me-3 categoty-color">All</button></div>
+                  <div><button type="button" class="btn btn-outline-primary me-3 categoty-color">Small</button></div>
+                  <div><button type="button" class="btn btn-outline-primary me-3 categoty-color">Medium</button></div>
+                  <div><button type="button" class="btn btn-outline-primary me-3 categoty-color">large</button></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- akhir cetegory -->
+
+        <!-- list cars -->
+        <section class="pt-3">
+          <div class="container">
+            <div class="row content">
+              <% data.forEach(element => { %>
+              <!-- item -->
+              <div class="col-xl-4 p-2 col-md-6">
+                <div class="card shadow">
+                  <div class="car-img">
+                    <img src="<%= element.foto %> " class="card-img-top" alt="car." />
+                  </div>
+                  <div class="card-body">
+                    <div class="car-text pb-2"><%= element.nama %></div>
+                    <h5 class="card-title">Rp <%= element.sewa_per_hari %>/Hari</h5>
+                    <div class="row">
+                      <div class="col-1">
+                        <img src="./asset/img/fi_clock.png" alt="" />
+                      </div>
+                      <div class="col">
+                        <p><%= element.updatedAt %></p>
+                      </div>
+                    </div>
+                    <div class="row justify-content-between">
+                      <div class="col-6">
+                        <button type="button" class="btn btn-outline-danger btn-card" data-bs-toggle="modal" data-bs-target="#exampleModal<%= element.id%>"><img src="./asset/img/fi_trash-2.png" alt="" srcset="" /> Hapus</button>
+                      </div>
+                      <div class="col-6">
+                        <a href="/update-car/<%=element.id%>" class="btn btn-success btn-card">
+                          <p class="pt-1"><img class="pe-1" src="./asset/img/fi_edit.png" alt="" srcset="" /> Edit</p></a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Modal -->
+              <div class="modal fade" id="exampleModal<%= element.id%>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content" style="width: 387px">
+                    <div class="modal-body text-center">
+                      <img src="./asset/img/img-BeepBeep.png" alt="" /><br />
+                      <strong>Menghapus Data Mobil</strong>
+                      <p class="px-5">Setelah dihapus, data mobil tidak dapat dikembalikan. Yakin ingin menghapus?</p>
+                      <div class="row justify-content-center">
+                        <div class="col-4">
+                          <a href="/delete-cars/<%= element.id%>" type="button" class="btn-del-y py-2 px-5" id="liveAlertBtn">Ya</a>
+                        </div>
+                        <div class="col-4">
+                          <a type="button" class="btn-del-t py-2 px-5" data-bs-dismiss="modal">Tidak</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- akhir modal -->
+              <!-- akhir item -->
+              <% }); %>
+            </div>
+          </div>
+        </section>
+        <!-- akhir list cars -->
+
+        <!-- alert -->
+        <div id="liveAlertPlaceholder" class="hide"></div>
+
+        <!-- Button trigger modal -->
+
+        <!-- akhir flex -->
+      </div>
+    </div>
+
+    <!-- akhir layout dasbord -->
+<%- include('./layouts/footer') %> 
